@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cnyglcvur6kac"]
+
+[ext_resource type="PackedScene" uid="uid://bbdofk6pyhjiv" path="res://Escenas/CositoParaPegarleALaPelotita.tscn" id="2_6iqxn"]
+[ext_resource type="PackedScene" uid="uid://dsb7dtmschld3" path="res://Escenas/pelota.tscn" id="3_6iqxn"]
+[ext_resource type="PackedScene" uid="uid://dohg57ocihuah" path="res://Escenas/ladrillos.tscn" id="3_avpwu"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6iqxn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avpwu"]
+size = Vector2(1647.1437, 52.857224)
+
+[node name="Node2D" type="Node2D" unique_id=2002148419]
+position = Vector2(224.00002, 108.00001)
+scale = Vector2(0.7, 0.7)
+
+[node name="CharacterBody2D" parent="." unique_id=267869225 instance=ExtResource("2_6iqxn")]
+position = Vector2(547, 564)
+
+[node name="Node2D" parent="." unique_id=1645209204 instance=ExtResource("3_6iqxn")]
+position = Vector2(564.2857, 552.8571)
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=538830514]
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="StaticBody2D6" unique_id=1016273143]
+position = Vector2(428.57123, -565.71423)
+rotation = 1.5707964
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6/StaticBody2D5" unique_id=170572739]
+position = Vector2(504.28583, 747.1429)
+scale = Vector2(1645.7145, 51.42856)
+texture = SubResource("CanvasTexture_6iqxn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6/StaticBody2D5" unique_id=151803969]
+position = Vector2(503.5711, 747.8571)
+scale = Vector2(0.9999992, 0.9999992)
+shape = SubResource("RectangleShape2D_avpwu")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D6" unique_id=785600093]
+position = Vector2(2075.7144, -565.7143)
+rotation = 1.5707964
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6/StaticBody2D4" unique_id=641060596]
+position = Vector2(504.28583, 747.1429)
+scale = Vector2(1645.7145, 51.42856)
+texture = SubResource("CanvasTexture_6iqxn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6/StaticBody2D4" unique_id=789635500]
+position = Vector2(503.5711, 747.8571)
+scale = Vector2(0.9999992, 0.9999992)
+shape = SubResource("RectangleShape2D_avpwu")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D6" unique_id=727793491]
+position = Vector2(4.2857056, -901.4284)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6/StaticBody2D3" unique_id=1272292863]
+position = Vector2(504.28583, 747.1429)
+scale = Vector2(1645.7145, 51.42856)
+texture = SubResource("CanvasTexture_6iqxn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6/StaticBody2D3" unique_id=851014789]
+position = Vector2(503.57123, 747.8571)
+scale = Vector2(0.9999994, 0.9999994)
+shape = SubResource("RectangleShape2D_avpwu")
+
+[node name="Ladrillos" parent="." unique_id=365999471 instance=ExtResource("3_avpwu")]
+position = Vector2(572.8571, 75.71429)
+scale = Vector2(0.99999994, 0.99999994)

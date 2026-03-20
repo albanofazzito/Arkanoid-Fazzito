@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bbdofk6pyhjiv"]
+
+[ext_resource type="Script" uid="uid://cg26lwv7y2io3" path="res://Scripts/cosito_para_pegarle_a_la_pelotita.gd" id="1_3pe6w"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_02024"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pe6w"]
+size = Vector2(57, 10)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=267869225]
+scale = Vector2(2, 2)
+script = ExtResource("1_3pe6w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476506338]
+position = Vector2(17.5, 5)
+scale = Vector2(55, 10)
+texture = SubResource("CanvasTexture_02024")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1585143913]
+position = Vector2(17.5, 5)
+shape = SubResource("RectangleShape2D_3pe6w")

@@ -1,0 +1,29 @@
+[gd_scene format=4 uid="uid://dohg57ocihuah"]
+
+[ext_resource type="Texture2D" uid="uid://bf0dvxhidk02h" path="res://Sprites/Ladrillos-Set.png" id="1_ubips"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lbsu"]
+texture = ExtResource("1_ubips")
+margins = Vector2i(4, 5)
+separation = Vector2i(0, 1)
+texture_region_size = Vector2i(49, 17)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24.5, -8.5, 24.5, -8.5, 24.5, 8.5, -24.5, 8.5)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24.5, -8.5, 24.5, -8.5, 24.5, 8.5, -24.5, 8.5)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24.5, -8.5, 24.5, -8.5, 24.5, 8.5, -24.5, 8.5)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24.5, -8.5, 24.5, -8.5, 24.5, 8.5, -24.5, 8.5)
+
+[sub_resource type="TileSet" id="TileSet_n6b88"]
+tile_size = Vector2i(49, 17)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_2lbsu")
+
+[node name="Node2D" type="Node2D" unique_id=365999471]
+
+[node name="LadrillosTile" type="TileMapLayer" parent="." unique_id=930471908]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAD8//7/AAAAAAAAAAD8////AAAAAAEAAAD8/wAAAAAAAAIAAAD8/wEAAAAAAAMAAAD9//7/AAAAAAAAAAD9////AAAAAAEAAAD9/wAAAAAAAAIAAAD9/wEAAAAAAAMAAAD+//7/AAAAAAAAAAD+////AAAAAAEAAAD+/wAAAAAAAAIAAAD+/wEAAAAAAAMAAAD///7/AAAAAAAAAAD/////AAAAAAEAAAD//wAAAAAAAAIAAAD//wEAAAAAAAMAAAAAAP7/AAAAAAAAAAAAAP//AAAAAAEAAAAAAAAAAAAAAAIAAAAAAAEAAAAAAAMAAAABAP7/AAAAAAAAAAABAP//AAAAAAEAAAABAAAAAAAAAAIAAAABAAEAAAAAAAMAAAACAP7/AAAAAAAAAAACAP//AAAAAAEAAAACAAAAAAAAAAIAAAACAAEAAAAAAAMAAAADAP7/AAAAAAAAAAADAP//AAAAAAEAAAADAAAAAAAAAAIAAAADAAEAAAAAAAMAAAA=")
+tile_set = SubResource("TileSet_n6b88")
