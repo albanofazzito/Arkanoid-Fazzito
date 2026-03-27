@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bbdofk6pyhjiv" path="res://Escenas/CositoParaPegarleALaPelotita.tscn" id="2_6iqxn"]
 [ext_resource type="PackedScene" uid="uid://dsb7dtmschld3" path="res://Escenas/pelota.tscn" id="3_6iqxn"]
 [ext_resource type="PackedScene" uid="uid://dohg57ocihuah" path="res://Escenas/ladrillos.tscn" id="3_avpwu"]
+[ext_resource type="PackedScene" uid="uid://btaq1g5u3j6pw" path="res://ManejadorValores.tscn" id="4_avpwu"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6iqxn"]
 
@@ -68,3 +69,6 @@ shape = SubResource("RectangleShape2D_avpwu")
 [node name="Ladrillos" parent="." unique_id=365999471 instance=ExtResource("3_avpwu")]
 position = Vector2(572.8571, 75.71429)
 scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Puntaje" parent="." unique_id=1506087889 instance=ExtResource("4_avpwu")]
+position = Vector2(-274.28574, -98.57144)

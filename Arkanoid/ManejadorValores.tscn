@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://btaq1g5u3j6pw"]
+
+[ext_resource type="Script" uid="uid://b52m4lhq7hf0h" path="res://Scripts/Puntaje.gd" id="1_y2hvo"]
+
+[node name="Node2D" type="Node2D" unique_id=1506087889]
+
+[node name="Label" type="Label" parent="." unique_id=283010649]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_y2hvo")

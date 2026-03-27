@@ -14,6 +14,10 @@ config/name="Arkanoid"
 run/main_scene="uid://cnyglcvur6kac"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+Autoload="*uid://bh67fnjirl1kq"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
