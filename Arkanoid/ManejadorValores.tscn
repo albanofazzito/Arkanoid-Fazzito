@@ -10,9 +10,9 @@ anchors_preset = 0
 [node name="Label" type="Label" parent="." unique_id=283010649]
 layout_mode = 0
 offset_left = -270.0
-offset_top = 737.0
+offset_top = 732.0
 offset_right = 832.0
-offset_bottom = 836.0
+offset_bottom = 831.0
 theme_override_fonts/font = ExtResource("1_kokqo")
 theme_override_font_sizes/font_size = 30
 script = ExtResource("1_y2hvo")
