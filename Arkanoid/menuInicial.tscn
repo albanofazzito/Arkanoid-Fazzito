@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://djdg6ukbgilkl"]
+
+[ext_resource type="Texture2D" uid="uid://dns26a00c64j8" path="res://Sprites/Boton/BotonJugar/Boton_Jugar.png" id="1_h1ow6"]
+[ext_resource type="Texture2D" uid="uid://b0fl600up1gfk" path="res://Sprites/Boton/BotonJugar/Boton_JugarPresionado.png" id="2_h1ow6"]
+[ext_resource type="Texture2D" uid="uid://cbhrp7w6c7a02" path="res://Sprites/Boton/BotonJugar/Boton-JugarPresionado2.png" id="2_pufkh"]
+[ext_resource type="Texture2D" uid="uid://0a01ymwp3yy7" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesSolo.png" id="4_5t1ak"]
+[ext_resource type="Texture2D" uid="uid://bolkceaib24l4" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesPressed.png" id="5_17vfp"]
+[ext_resource type="Texture2D" uid="uid://sig10n4bwq6g" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesHover.png" id="6_xi061"]
+[ext_resource type="Script" uid="uid://ds0m5pn4ndltn" path="res://Scripts/Jugar.gd" id="7_kqal1"]
+[ext_resource type="Texture2D" uid="uid://dwodc62v1mdhk" path="res://Sprites/Arkanoid.png" id="7_xi061"]
+[ext_resource type="AudioStream" uid="uid://b27s37kjxiu6k" path="res://Audio/MusicaMenu.mp3" id="9_v5p4a"]
+
+[node name="Control" type="Control" unique_id=252899166]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -9.0
+offset_right = 28.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1102701250]
+layout_mode = 0
+offset_left = -51.0
+offset_top = -47.0
+offset_right = 1228.0
+offset_bottom = 692.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="TextureButton" parent="." unique_id=646459553]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 297.0
+offset_right = 496.0
+offset_bottom = 323.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("1_h1ow6")
+texture_pressed = ExtResource("2_pufkh")
+texture_hover = ExtResource("2_h1ow6")
+ignore_texture_size = true
+script = ExtResource("7_kqal1")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1949896022]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 438.0
+offset_right = 496.0
+offset_bottom = 464.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("4_5t1ak")
+texture_pressed = ExtResource("5_17vfp")
+texture_hover = ExtResource("6_xi061")
+ignore_texture_size = true
+script = ExtResource("7_kqal1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=705149818]
+position = Vector2(556, 425.99997)
+scale = Vector2(8, 8)
+skew = 0.19024089
+texture = ExtResource("7_xi061")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=500183556]
+position = Vector2(34, 137)
+stream = ExtResource("9_v5p4a")
+autoplay = true

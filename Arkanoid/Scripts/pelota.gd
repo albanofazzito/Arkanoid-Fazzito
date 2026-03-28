@@ -25,7 +25,7 @@ func rebotar(colision):
 	velocidad= velocidad.bounce(colision.get_normal( ))
 	if colision.get_collider()==plataforma:
 		print(diferencia)
-		velocidad.x= diferencia * 15
+		velocidad.x= diferencia * 14
 		
 	
 func romperLadrillo(colision):

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const velocidad = 500.0
+const velocidad = 750.0
 
 func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")

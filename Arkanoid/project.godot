@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Arkanoid"
-run/main_scene="uid://cnyglcvur6kac"
+run/main_scene="uid://djdg6ukbgilkl"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
