@@ -20,5 +20,4 @@ Un clon de Arkanoid desarrollado en **Godot ** con GDScript.
 
 - [ ] Menú principal y pantalla de ajustes
 - [ ] Pantalla de Game Over
-- [ ] Sistema de vidas
 - [ ] Audio y efectos de sonido
