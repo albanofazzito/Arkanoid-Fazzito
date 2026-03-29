@@ -10,12 +10,17 @@ func _ready():
 
 
 func _physics_process(delta):
-
-	var colision= move_and_collide(velocidad*delta)
-	if colision != null:
-		rebotar(colision)
-		if colision.get_collider()==ladrillos:
-			romperLadrillo(colision)
+	if Autoload.juego_andando==true: 
+		if velocidad== Vector2(0,0):
+			velocidad= Vector2(300,400)
+		else:
+			var colision= move_and_collide(velocidad*delta)
+			if colision != null:
+				rebotar(colision)
+				if colision.get_collider()==ladrillos:
+					romperLadrillo(colision)
+	else: 
+		velocidad= Vector2(0,0)
 
 	
 	

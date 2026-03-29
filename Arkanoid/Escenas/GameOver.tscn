@@ -7,16 +7,29 @@
 [ext_resource type="Texture2D" uid="uid://0a01ymwp3yy7" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesSolo.png" id="5_ktvfh"]
 [ext_resource type="Texture2D" uid="uid://bolkceaib24l4" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesPressed.png" id="6_62scv"]
 [ext_resource type="Texture2D" uid="uid://sig10n4bwq6g" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesHover.png" id="7_smbnm"]
+[ext_resource type="Script" uid="uid://dhiwh2m365q7k" path="res://Scripts/Opciones.gd" id="8_obo1j"]
 [ext_resource type="FontFile" uid="uid://8c26helxb1aq" path="res://public-pixel-font/PublicPixel-rv0pA.ttf" id="8_u8dko"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmwi1"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1314399482]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=77868819]
-offset_left = 238.0
-offset_top = 122.0
-offset_right = 830.0
-offset_bottom = 586.0
-color = Color(0.34473792, 0.344738, 0.34473795, 1)
+[node name="Panel" type="Panel" parent="." unique_id=814452091]
+offset_left = 233.0
+offset_top = 113.0
+offset_right = 839.0
+offset_bottom = 593.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wmwi1")
 
 [node name="Button" type="TextureButton" parent="." unique_id=101399060]
 offset_left = 419.0
@@ -40,12 +53,12 @@ texture_normal = ExtResource("5_ktvfh")
 texture_pressed = ExtResource("6_62scv")
 texture_hover = ExtResource("7_smbnm")
 ignore_texture_size = true
-script = ExtResource("4_e2m3a")
+script = ExtResource("8_obo1j")
 
 [node name="Label" type="Label" parent="." unique_id=1690189300]
-offset_left = 275.0
+offset_left = 282.0
 offset_top = 166.0
-offset_right = 788.0
+offset_right = 795.0
 offset_bottom = 244.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_u8dko")

@@ -9,6 +9,7 @@ func _ready():
 	plataforma= get_parent().get_node("CharacterBody2D")
 	Autoload.vidas=3
 	Autoload.puntaje=0
+	Autoload.juego_andando=false
 
 
 func _on_body_entered(body):
@@ -17,6 +18,7 @@ func _on_body_entered(body):
 		pelota.set_position(plataforma.get_position() + Vector2(0,-30))
 	else:
 		GameOver.visible=true
+		Autoload.juego_andando=false
 		
 
 	

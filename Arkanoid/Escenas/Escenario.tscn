@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://cnyglcvur6kac"]
 
+[ext_resource type="PackedScene" uid="uid://dc3n4eprpbmqa" path="res://Escenas/Tutorial.tscn" id="1_dwj8s"]
 [ext_resource type="PackedScene" uid="uid://bbdofk6pyhjiv" path="res://Escenas/CositoParaPegarleALaPelotita.tscn" id="1_xcbff"]
+[ext_resource type="Script" uid="uid://1ohp6vjc2kut" path="res://Scripts/EmpezarJuego.gd" id="2_exngi"]
 [ext_resource type="PackedScene" uid="uid://dsb7dtmschld3" path="res://Escenas/pelota.tscn" id="2_r3c20"]
 [ext_resource type="PackedScene" uid="uid://dohg57ocihuah" path="res://Escenas/ladrillos.tscn" id="3_ohuqy"]
 [ext_resource type="PackedScene" uid="uid://csaba7yrcfut1" path="res://Escenas/Vidas.tscn" id="4_ohuqy"]
-[ext_resource type="PackedScene" uid="uid://btaq1g5u3j6pw" path="res://ManejadorValores.tscn" id="4_uiu4m"]
+[ext_resource type="PackedScene" uid="uid://btaq1g5u3j6pw" path="res://Escenas/ManejadorValores.tscn" id="4_uiu4m"]
 [ext_resource type="Script" uid="uid://xq1d2dq7wgtf" path="res://Scripts/ManejadorVidas.gd" id="5_r3c20"]
 [ext_resource type="PackedScene" uid="uid://3by4xc7ve7p" path="res://Escenas/GameOver.tscn" id="7_uiu4m"]
 [ext_resource type="AudioStream" uid="uid://dnwvhu185vup0" path="res://Audio/MusicaJuego.mp3" id="8_dwben"]
@@ -20,6 +22,11 @@ size = Vector2(1577.1431, 20)
 [node name="Node2D" type="Node2D" unique_id=2002148419]
 position = Vector2(224.00002, 108.00001)
 scale = Vector2(0.7, 0.7)
+
+[node name="CanvasLayer" parent="." unique_id=597064701 instance=ExtResource("1_dwj8s")]
+offset = Vector2(20, 100)
+transform = Transform2D(1, 0, 0, 1, 20, 100)
+script = ExtResource("2_exngi")
 
 [node name="Fondo" type="ColorRect" parent="." unique_id=676614759]
 offset_left = -531.42847
@@ -106,9 +113,12 @@ shape = SubResource("RectangleShape2D_ohuqy")
 
 [node name="GameOver" parent="." unique_id=1314399482 instance=ExtResource("7_uiu4m")]
 visible = false
+offset = Vector2(40, 0)
+transform = Transform2D(1, 0, 0, 1, 40, 0)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=937233656]
 stream = ExtResource("8_dwben")
 autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

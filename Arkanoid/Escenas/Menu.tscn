@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://tfxn0jcrbjba"]
 
+[ext_resource type="Script" uid="uid://s0xvor1os4gm" path="res://Scripts/Sonido.gd" id="1_xe2ru"]
+[ext_resource type="FontFile" uid="uid://8c26helxb1aq" path="res://public-pixel-font/PublicPixel-rv0pA.ttf" id="2_xhjix"]
+[ext_resource type="AudioStream" uid="uid://bkcipfiyqdrow" path="res://Audio/MusicaMenuAjustes.mp3" id="3_o2l53"]
+[ext_resource type="Script" uid="uid://bpbvsugsyx3y8" path="res://Scripts/menu.gd" id="4_425bc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhjix"]
+bg_color = Color(0.39490443, 0.39490443, 0.39490426, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
 [node name="Control" type="Control" unique_id=1028147692]
 layout_mode = 3
 anchors_preset = 15
@@ -8,9 +20,87 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HSlider" type="HSlider" parent="." unique_id=1726608219]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1559822695]
 layout_mode = 0
-offset_left = 358.0
-offset_top = 74.0
-offset_right = 791.0
-offset_bottom = 286.0
+offset_left = -21.0
+offset_top = -17.0
+offset_right = 1159.0
+offset_bottom = 653.0
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=2094550729]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 142.0
+offset_right = 803.0
+offset_bottom = 201.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xhjix")
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=13190346]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -5.0
+offset_right = 58.66668
+offset_bottom = 12.000019
+scale = Vector2(3, 3)
+stretch_mode = 4
+script = ExtResource("1_xe2ru")
+
+[node name="HSlider" type="HSlider" parent="Panel" unique_id=1726608219]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 409.0
+offset_bottom = 51.0
+value = 100.0
+
+[node name="Label" type="Label" parent="." unique_id=291387431]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 10.0
+offset_right = 1155.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("2_xhjix")
+theme_override_font_sizes/font_size = 50
+text = "AJUSTES"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1803546346]
+stream = ExtResource("3_o2l53")
+autoplay = true
+parameters/looping = true
+
+[node name="Label2" type="Label" parent="." unique_id=1536662324]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 154.0
+offset_right = 401.0
+offset_bottom = 200.0
+theme_override_fonts/font = ExtResource("2_xhjix")
+theme_override_font_sizes/font_size = 30
+text = "Musica:"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=128350024]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 331.0
+offset_right = 728.0
+offset_bottom = 377.0
+theme_override_fonts/font = ExtResource("2_xhjix")
+theme_override_font_sizes/font_size = 30
+text = "WIP"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1703327922]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 28.0
+offset_right = 181.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("2_xhjix")
+theme_override_font_sizes/font_size = 20
+text = "Volver"
+script = ExtResource("4_425bc")
+
+[connection signal="value_changed" from="Panel/HSlider" to="Panel/TextureRect" method="_on_h_slider_value_changed"]
