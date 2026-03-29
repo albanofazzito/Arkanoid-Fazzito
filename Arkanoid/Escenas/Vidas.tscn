@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://csaba7yrcfut1"]
 
 [ext_resource type="FontFile" uid="uid://8c26helxb1aq" path="res://public-pixel-font/PublicPixel-rv0pA.ttf" id="1_trdvd"]
-[ext_resource type="Script" uid="uid://bv1k83avcioi2" path="res://Vidas.gd" id="2_u5qqq"]
+[ext_resource type="Script" uid="uid://bv1k83avcioi2" path="res://Scripts/Vidas.gd" id="2_u5qqq"]
 
 [node name="Control" type="Control" unique_id=216479384]
 layout_mode = 3

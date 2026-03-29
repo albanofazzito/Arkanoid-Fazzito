@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://3by4xc7ve7p"]
+
+[ext_resource type="Texture2D" uid="uid://dns26a00c64j8" path="res://Sprites/Boton/BotonJugar/Boton_Jugar.png" id="1_wmwi1"]
+[ext_resource type="Texture2D" uid="uid://cbhrp7w6c7a02" path="res://Sprites/Boton/BotonJugar/Boton-JugarPresionado2.png" id="2_obo1j"]
+[ext_resource type="Texture2D" uid="uid://b0fl600up1gfk" path="res://Sprites/Boton/BotonJugar/Boton_JugarPresionado.png" id="3_2p8se"]
+[ext_resource type="Script" uid="uid://ds0m5pn4ndltn" path="res://Scripts/Jugar.gd" id="4_e2m3a"]
+[ext_resource type="Texture2D" uid="uid://0a01ymwp3yy7" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesSolo.png" id="5_ktvfh"]
+[ext_resource type="Texture2D" uid="uid://bolkceaib24l4" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesPressed.png" id="6_62scv"]
+[ext_resource type="Texture2D" uid="uid://sig10n4bwq6g" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesHover.png" id="7_smbnm"]
+[ext_resource type="FontFile" uid="uid://8c26helxb1aq" path="res://public-pixel-font/PublicPixel-rv0pA.ttf" id="8_u8dko"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1314399482]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=77868819]
+offset_left = 238.0
+offset_top = 122.0
+offset_right = 830.0
+offset_bottom = 586.0
+color = Color(0.34473792, 0.344738, 0.34473795, 1)
+
+[node name="Button" type="TextureButton" parent="." unique_id=101399060]
+offset_left = 419.0
+offset_top = 297.0
+offset_right = 496.0
+offset_bottom = 323.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("1_wmwi1")
+texture_pressed = ExtResource("2_obo1j")
+texture_hover = ExtResource("3_2p8se")
+ignore_texture_size = true
+script = ExtResource("4_e2m3a")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1055867730]
+offset_left = 419.0
+offset_top = 438.0
+offset_right = 496.0
+offset_bottom = 464.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("5_ktvfh")
+texture_pressed = ExtResource("6_62scv")
+texture_hover = ExtResource("7_smbnm")
+ignore_texture_size = true
+script = ExtResource("4_e2m3a")
+
+[node name="Label" type="Label" parent="." unique_id=1690189300]
+offset_left = 275.0
+offset_top = 166.0
+offset_right = 788.0
+offset_bottom = 244.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_u8dko")
+theme_override_font_sizes/font_size = 57
+text = "GAME OVER"

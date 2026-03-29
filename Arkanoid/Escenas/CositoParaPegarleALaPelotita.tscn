@@ -1,20 +1,22 @@
 [gd_scene format=3 uid="uid://bbdofk6pyhjiv"]
 
 [ext_resource type="Script" uid="uid://cg26lwv7y2io3" path="res://Scripts/cosito_para_pegarle_a_la_pelotita.gd" id="1_3pe6w"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_02024"]
+[ext_resource type="Texture2D" uid="uid://ccpsavo7fa1dr" path="res://Sprites/CosoParaGolpear.png" id="2_7cdcs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pe6w"]
-size = Vector2(57, 10)
+size = Vector2(80.9375, 19.5)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=267869225]
 scale = Vector2(2, 2)
 script = ExtResource("1_3pe6w")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476506338]
-scale = Vector2(90, 10)
-texture = SubResource("CanvasTexture_02024")
+texture_filter = 1
+position = Vector2(11.5, 64.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_7cdcs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1585143913]
+position = Vector2(0.25, -0.25)
 scale = Vector2(1.6, 1)
 shape = SubResource("RectangleShape2D_3pe6w")

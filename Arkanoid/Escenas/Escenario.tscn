@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dohg57ocihuah" path="res://Escenas/ladrillos.tscn" id="3_ohuqy"]
 [ext_resource type="PackedScene" uid="uid://csaba7yrcfut1" path="res://Escenas/Vidas.tscn" id="4_ohuqy"]
 [ext_resource type="PackedScene" uid="uid://btaq1g5u3j6pw" path="res://ManejadorValores.tscn" id="4_uiu4m"]
-[ext_resource type="Script" uid="uid://xq1d2dq7wgtf" path="res://Escenas/ManejadorVidas.gd" id="5_r3c20"]
+[ext_resource type="Script" uid="uid://xq1d2dq7wgtf" path="res://Scripts/ManejadorVidas.gd" id="5_r3c20"]
+[ext_resource type="PackedScene" uid="uid://3by4xc7ve7p" path="res://Escenas/GameOver.tscn" id="7_uiu4m"]
+[ext_resource type="AudioStream" uid="uid://dnwvhu185vup0" path="res://Audio/MusicaJuego.mp3" id="8_dwben"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6iqxn"]
 
@@ -19,7 +21,7 @@ size = Vector2(1577.1431, 20)
 position = Vector2(224.00002, 108.00001)
 scale = Vector2(0.7, 0.7)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=676614759]
+[node name="Fondo" type="ColorRect" parent="." unique_id=676614759]
 offset_left = -531.42847
 offset_top = -358.57138
 offset_right = 1765.7141
@@ -101,5 +103,12 @@ script = ExtResource("5_r3c20")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1755058927]
 position = Vector2(580.00006, 0)
 shape = SubResource("RectangleShape2D_ohuqy")
+
+[node name="GameOver" parent="." unique_id=1314399482 instance=ExtResource("7_uiu4m")]
+visible = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=937233656]
+stream = ExtResource("8_dwben")
+autoplay = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

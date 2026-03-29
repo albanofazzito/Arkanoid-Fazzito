@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var velocidad:= Vector2(200,300)
+var velocidad:= Vector2(300,400)
 var ladrillos
 var plataforma
 func _ready():
@@ -16,7 +16,6 @@ func _physics_process(delta):
 		rebotar(colision)
 		if colision.get_collider()==ladrillos:
 			romperLadrillo(colision)
-		
 
 	
 	
@@ -24,10 +23,9 @@ func rebotar(colision):
 	var diferencia = colision.get_position().x - plataforma.global_position.x
 	velocidad= velocidad.bounce(colision.get_normal( ))
 	if colision.get_collider()==plataforma:
-		print(diferencia)
-		velocidad.x= diferencia * 14
-		
-	
+		velocidad.x= diferencia * 15
+
+
 func romperLadrillo(colision):
 	var ladrillos_ubi=ladrillos.local_to_map(ladrillos.to_local(colision.get_position() + (-colision.get_normal()*0.3)))
 	ladrillos.erase_cell(ladrillos_ubi)
