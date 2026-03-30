@@ -17,6 +17,6 @@ Un clon de Arkanoid desarrollado en **Godot ** con GDScript.
 ##  Estado del proyecto
 
  Desarrollo terminado, features que pueden o no agregarse:
- -[] Niveles
- -[] Elementos de rejugabilidad
- -[] Un menjor menu
+ -[ ] Niveles
+ -[ ] Elementos de rejugabilidad
+ -[ ] Un menjor menu
