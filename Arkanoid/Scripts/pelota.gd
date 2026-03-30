@@ -30,8 +30,11 @@ func rebotar(colision):
 	var diferencia = colision.get_position().x - plataforma.global_position.x
 	velocidad= velocidad.bounce(colision.get_normal( ))
 	if colision.get_collider()==plataforma:
-		velocidad.x= diferencia * 15
-
+		velocidad.y= -400
+		if diferencia<0:
+			velocidad.x= diferencia * 10 - 300
+		else:
+			velocidad.x= diferencia * 10 + 300
 
 func romperLadrillo(colision):
 	var ladrillos_ubi=ladrillos.local_to_map(ladrillos.to_local(colision.get_position() + (-colision.get_normal()*0.3)))

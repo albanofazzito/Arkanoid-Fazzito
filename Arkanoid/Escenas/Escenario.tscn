@@ -22,7 +22,7 @@
 size = Vector2(1678.573, 52.857224)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohuqy"]
-size = Vector2(1577.1431, 20)
+size = Vector2(1741.4287, 20)
 
 [node name="Node2D" type="Node2D" unique_id=2002148419]
 position = Vector2(224.00002, 108.00001)
@@ -42,6 +42,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="CharacterBody2D" parent="." unique_id=267869225 instance=ExtResource("1_xcbff")]
 position = Vector2(559.99994, 655.7143)
+motion_mode = 1
 
 [node name="Node2D" parent="." unique_id=1645209204 instance=ExtResource("2_r3c20")]
 position = Vector2(564.2857, 552.8571)
@@ -113,7 +114,7 @@ scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("5_r3c20")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1755058927]
-position = Vector2(580.00006, 0)
+position = Vector2(587.85724, 0)
 shape = SubResource("RectangleShape2D_ohuqy")
 
 [node name="GameOver" parent="." unique_id=1314399482 instance=ExtResource("7_uiu4m")]
