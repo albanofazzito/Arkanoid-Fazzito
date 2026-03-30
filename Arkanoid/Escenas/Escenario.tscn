@@ -10,6 +10,11 @@
 [ext_resource type="Script" uid="uid://xq1d2dq7wgtf" path="res://Scripts/ManejadorVidas.gd" id="5_r3c20"]
 [ext_resource type="PackedScene" uid="uid://3by4xc7ve7p" path="res://Escenas/GameOver.tscn" id="7_uiu4m"]
 [ext_resource type="AudioStream" uid="uid://dnwvhu185vup0" path="res://Audio/MusicaJuego.mp3" id="8_dwben"]
+[ext_resource type="AudioStream" uid="uid://ckb45qcbt7tky" path="res://Audio/VidaPerdida.mp3" id="11_mk15c"]
+[ext_resource type="AudioStream" uid="uid://c7obn17a2bkei" path="res://Audio/RomperLadrillo.mp3" id="12_ua7ed"]
+[ext_resource type="PackedScene" uid="uid://tchf76kkct8t" path="res://Escenas/Victoria.tscn" id="13_dnijq"]
+[ext_resource type="Script" uid="uid://cs1stl4xw0joo" path="res://Scripts/Victoria.gd" id="14_ff6g6"]
+[ext_resource type="AudioStream" uid="uid://bgfoi8auxnoao" path="res://Audio/sonidoVictoria.mp3" id="15_3vytp"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6iqxn"]
 
@@ -120,5 +125,23 @@ transform = Transform2D(1, 0, 0, 1, 40, 0)
 stream = ExtResource("8_dwben")
 autoplay = true
 parameters/looping = true
+
+[node name="VidaPerdida" type="AudioStreamPlayer2D" parent="." unique_id=1749307579]
+stream = ExtResource("11_mk15c")
+volume_db = -8.196
+
+[node name="RomperLadrillo" type="AudioStreamPlayer2D" parent="." unique_id=188868348]
+stream = ExtResource("12_ua7ed")
+volume_db = -25.893
+
+[node name="Victoria" parent="." unique_id=1863438756 instance=ExtResource("13_dnijq")]
+visible = false
+offset = Vector2(50, 20)
+transform = Transform2D(1, 0, 0, 1, 50, 20)
+script = ExtResource("14_ff6g6")
+
+[node name="VictoriaSonido" type="AudioStreamPlayer2D" parent="." unique_id=1909760360]
+stream = ExtResource("15_3vytp")
+volume_db = 0.105
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

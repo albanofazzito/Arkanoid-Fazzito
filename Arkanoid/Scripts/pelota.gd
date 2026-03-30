@@ -3,9 +3,11 @@ extends CharacterBody2D
 var velocidad:= Vector2(300,400)
 var ladrillos
 var plataforma
+var romperLadrilloSonido
 func _ready():
 	ladrillos= get_parent().get_node("Ladrillos/LadrillosTile")
 	plataforma= get_parent().get_node("CharacterBody2D")
+	romperLadrilloSonido= get_parent().get_node("RomperLadrillo")
 
 
 
@@ -35,3 +37,4 @@ func romperLadrillo(colision):
 	var ladrillos_ubi=ladrillos.local_to_map(ladrillos.to_local(colision.get_position() + (-colision.get_normal()*0.3)))
 	ladrillos.erase_cell(ladrillos_ubi)
 	Autoload.puntaje+=1
+	romperLadrilloSonido.play()

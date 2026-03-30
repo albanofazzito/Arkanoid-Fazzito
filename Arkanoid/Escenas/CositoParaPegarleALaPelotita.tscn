@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ccpsavo7fa1dr" path="res://Sprites/CosoParaGolpear.png" id="2_7cdcs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pe6w"]
-size = Vector2(80.9375, 19.5)
+size = Vector2(80.9375, 4)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=267869225]
 scale = Vector2(2, 2)
@@ -17,6 +17,6 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_7cdcs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1585143913]
-position = Vector2(0.25, -0.25)
+position = Vector2(0.25, -8)
 scale = Vector2(1.6, 1)
 shape = SubResource("RectangleShape2D_3pe6w")

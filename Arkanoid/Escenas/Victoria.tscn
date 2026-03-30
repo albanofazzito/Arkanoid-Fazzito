@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://tchf76kkct8t"]
+
+[ext_resource type="Texture2D" uid="uid://dns26a00c64j8" path="res://Sprites/Boton/BotonJugar/Boton_Jugar.png" id="1_ebxf6"]
+[ext_resource type="Texture2D" uid="uid://cbhrp7w6c7a02" path="res://Sprites/Boton/BotonJugar/Boton-JugarPresionado2.png" id="2_c04n7"]
+[ext_resource type="Texture2D" uid="uid://b0fl600up1gfk" path="res://Sprites/Boton/BotonJugar/Boton_JugarPresionado.png" id="3_1y1sd"]
+[ext_resource type="Script" uid="uid://ds0m5pn4ndltn" path="res://Scripts/Jugar.gd" id="4_5n7kw"]
+[ext_resource type="Texture2D" uid="uid://0a01ymwp3yy7" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesSolo.png" id="5_n5oa8"]
+[ext_resource type="Texture2D" uid="uid://bolkceaib24l4" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesPressed.png" id="6_ooyih"]
+[ext_resource type="Texture2D" uid="uid://sig10n4bwq6g" path="res://Sprites/Boton/BotonAjustes/Boton-AjustesHover.png" id="7_nm2xv"]
+[ext_resource type="Script" uid="uid://dhiwh2m365q7k" path="res://Scripts/Opciones.gd" id="8_kdvhh"]
+[ext_resource type="FontFile" uid="uid://8c26helxb1aq" path="res://public-pixel-font/PublicPixel-rv0pA.ttf" id="9_ekf5o"]
+[ext_resource type="Texture2D" uid="uid://c04iid66mkj1p" path="res://Sprites/Trofeo.png" id="10_onl37"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgaca"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1863438756]
+
+[node name="Panel" type="Panel" parent="." unique_id=2056795058]
+offset_left = 233.0
+offset_top = 9.0
+offset_right = 839.0
+offset_bottom = 602.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kgaca")
+
+[node name="Button" type="TextureButton" parent="." unique_id=805182312]
+offset_left = 417.0
+offset_top = 364.0
+offset_right = 494.0
+offset_bottom = 390.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("1_ebxf6")
+texture_pressed = ExtResource("2_c04n7")
+texture_hover = ExtResource("3_1y1sd")
+ignore_texture_size = true
+script = ExtResource("4_5n7kw")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=340471001]
+offset_left = 417.0
+offset_top = 474.0
+offset_right = 494.0
+offset_bottom = 500.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("5_n5oa8")
+texture_pressed = ExtResource("6_ooyih")
+texture_hover = ExtResource("7_nm2xv")
+ignore_texture_size = true
+script = ExtResource("8_kdvhh")
+
+[node name="Label" type="Label" parent="." unique_id=2068382188]
+offset_left = 244.0
+offset_top = 38.0
+offset_right = 829.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.94147575, 0.8118343, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("9_ekf5o")
+theme_override_font_sizes/font_size = 46
+text = "FELICIDADES"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=808013145]
+position = Vector2(628, 320)
+scale = Vector2(4, 4)
+texture = ExtResource("10_onl37")
