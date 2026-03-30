@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dsb7dtmschld3" path="res://Escenas/pelota.tscn" id="2_r3c20"]
 [ext_resource type="PackedScene" uid="uid://dohg57ocihuah" path="res://Escenas/ladrillos.tscn" id="3_ohuqy"]
 [ext_resource type="PackedScene" uid="uid://csaba7yrcfut1" path="res://Escenas/Vidas.tscn" id="4_ohuqy"]
-[ext_resource type="PackedScene" uid="uid://btaq1g5u3j6pw" path="res://Escenas/ManejadorValores.tscn" id="4_uiu4m"]
+[ext_resource type="PackedScene" uid="uid://btaq1g5u3j6pw" path="res://ManejadorValores.tscn" id="4_uiu4m"]
 [ext_resource type="Script" uid="uid://xq1d2dq7wgtf" path="res://Scripts/ManejadorVidas.gd" id="5_r3c20"]
 [ext_resource type="PackedScene" uid="uid://3by4xc7ve7p" path="res://Escenas/GameOver.tscn" id="7_uiu4m"]
 [ext_resource type="AudioStream" uid="uid://dnwvhu185vup0" path="res://Audio/MusicaJuego.mp3" id="8_dwben"]

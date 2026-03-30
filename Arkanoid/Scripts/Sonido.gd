@@ -5,7 +5,7 @@ var slider
 var texturas
 func _ready():
 	texturas = [preload("res://Sprites/SonidoCero.png"), preload("res://Sprites/SonidoBajo.png"), preload("res://Sprites/SonidoMedio.png"), preload("res://Sprites/SonidoAlto.png")]
-	slider= get_parent().get_node("Panel2/HSlider")
+	slider= get_parent().get_node("/HSlider")
 	texture = texturas[3]
 
 
